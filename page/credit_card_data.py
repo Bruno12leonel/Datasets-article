@@ -103,7 +103,25 @@ def main():
     if num_vars % divisor != 0:
         fig.delaxes(axs.flatten()[-1])
 
-    st.pyplot(fig)
+    st.pyplot(fig)  
 
+
+    # Conclusão do que eu fiz nos dados para poder trabalhar com eles
+    st.write('**Resumo das operações realizadas**')
+    st.write('1. Removi a coluna `CUST_ID`')
+    st.write('2. Preenchi os valores NaN com a média da coluna')
+    st.write('3. Visualizei os dados utilizando PCA')
+    st.write('4. Verifiquei a distribuição dos dados')
+    st.write('5. Verifiquei a presença de outliers')
+    st.write('6. Visualizei a correlação entre as variáveis')
+
+    # Texto de conclusão
+    st.write('**Conclusão**')
+    st.write('Os dados inicias apresentavam somente alguns valores NaN, que foram preenchidos com a média da coluna. A coluna `CUST_ID` foi removida, pois não apresentava informações relevantes para a análise. A visualização dos dados utilizando PCA mostrou que os dados estão bem distribuídos. A distribuição dos dados e a presença de outliers foram verificadas. A correlação entre as variáveis foi visualizada e não apresentou correlações fortes entre as variáveis. Abaixo é possivel fazer o download do csv final.')
+
+    # Adicionando botão para baixar o arquivo csv final
+    st.markdown('**Download do arquivo CSV final**')
+    st.markdown('Clique no botão abaixo para baixar o arquivo CSV final')
+    st.markdown('**[Download Customer_Data.csv](https://drive.google.com/file/d/1sZql1hFK6kS2XEdKT8Rjulpu7PDlsjuw/view?usp=sharing)**')
 if __name__ == '__main__': 
     main()

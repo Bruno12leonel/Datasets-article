@@ -16,6 +16,11 @@ def main():
     with st.spinner(f"Loading {selection} ..."):
         page.main()  
 
+    # Add enough space to push the text to the bottom
+    st.sidebar.markdown("<br>"*25, unsafe_allow_html=True)
+
+    # Add your text
+    st.sidebar.markdown('Made by: **Bruno Leonel**')
 
 
 if __name__ == '__main__': 
