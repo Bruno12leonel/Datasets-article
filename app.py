@@ -1,10 +1,10 @@
 import streamlit as st
 import page.credit_card_data  as credit_card_data
-import page.new_page as new_page
+import page.reaction_network as reaction_network
 
 PAGES = {
     "Credit Card Data": credit_card_data,
-    "New Page": new_page
+    "KEGG Metabolic Reaction Network (Undirected)": reaction_network
 }
 
 
