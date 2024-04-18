@@ -1,10 +1,12 @@
 import streamlit as st
 import page.credit_card_data  as credit_card_data
 import page.reaction_network as reaction_network
+import page.gtconedset as gtconedset
 
 PAGES = {
     "Credit Card Data": credit_card_data,
-    "KEGG Metabolic Reaction Network (Undirected)": reaction_network
+    "KEGG Metabolic Reaction Network (Undirected)": reaction_network,
+    "Gas Turbine CO and NOx Emission Data Set": gtconedset
 }
 
 
