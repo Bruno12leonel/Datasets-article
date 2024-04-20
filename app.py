@@ -2,16 +2,26 @@ import streamlit as st
 import page.credit_card_data  as credit_card_data
 import page.reaction_network as reaction_network
 import page.gtconedset as gtconedset
+import page.dashboard as dashboard
 
 PAGES = {
     "Credit Card Data": credit_card_data,
     "KEGG Metabolic Reaction Network (Undirected)": reaction_network,
-    "Gas Turbine CO and NOx Emission Data Set": gtconedset
+    "Gas Turbine CO and NOx Emission Data Set": gtconedset,
+    "US Population dashboard": dashboard
 }
 
 
 def main():
+    st.set_page_config(
+    page_title="US Population Dashboard",
+    page_icon="🏂",
+    layout="wide",
+    initial_sidebar_state="expanded")
+
+
     st.sidebar.title('Menu')
+
     selection = st.sidebar.radio("Choose the dataset", list(PAGES.keys()))
     page = PAGES[selection]
     
